@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+class father_and_mother{
+
+public:
+    int height;
+    string skincolour;
+    /*int height_f(int iheight){
+      height=iheight;
+      return 0;
+    }*/
+    /*int skincolour_m(string icolour){
+      skincolour=icolour;
+      return 0;
+}*/
+};
+
+class child1:public father_and_mother{
+public:
+        int askingparents(){
+        cout<<"What is my height and colour?"<<endl;
+        return 0;
+        }
+        int setcolourandheight(int h,string c){
+        height=h;
+        skincolour=c;
+        return 0;
+        }
+        int display(){
+        cout<<"height is "<<height<<" and colour is "<<skincolour<<endl;
+        return 0;
+        }
+};
+class child2:public father_and_mother{
+public:
+        int askingparents(){
+        cout<<"What is my height and colour?"<<endl;
+        return 0;
+        }
+        int setcolourandheight(int ih,string ic){
+        height=ih;
+        skincolour=ic;
+        return 0;
+        }
+        int display(){
+        cout<<"height is "<<height<<" and colour is "<<skincolour<<endl;
+        return 0;
+        }
+};
+
+int main(){
+child1 eli;
+child2 reva;
+eli.setcolourandheight(6,"grey");
+reva.setcolourandheight(16,"white");
+eli.display();
+reva.display();
+}
